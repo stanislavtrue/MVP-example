@@ -17,3 +17,94 @@
 
 MVP зазвичай використовується в додатках Windows Forms і ASP.NET форми додатків. Вибір шаблону проектування архітектури програмного забезпечення залежить від вимог системи.
 ## Приклад
+### Опис
+В цьому прикладі реалізовано простий калькулятор з однією операцією додавання.
+### Компоненти
+#### Model
+Відповідає лише за логіку додавання, але не взаємодіє з користувачем.
+```charp
+public class Model
+{
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+```
+#### View
+Не містить логіки обчислень, а лише показує дані користувачу.
+```csharp
+public partial class Form1 : Form
+{
+    private TextBox FirstNumberText;
+    private TextBox SecondNumberText;
+    private Button CalculateButton;
+    private Label ResultLabel;
+    private Label Plus;
+
+    public string FirstNumber => FirstNumberText.Text;
+    public string SecondNumber => SecondNumberText.Text;
+
+    public string Result { set => ResultLabel.Text = value; }
+
+    public event EventHandler AddClicked;
+    
+    public Form1()
+    {
+        InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
+        this.components = new System.ComponentModel.Container();
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.ClientSize = new System.Drawing.Size(300, 200);
+        this.Text = "Calculator";
+
+        FirstNumberText = new TextBox { Location = new System.Drawing.Point(20, 20), Width = 20 };
+        SecondNumberText = new TextBox { Location = new System.Drawing.Point(80, 20), Width = 20 };
+        CalculateButton = new Button
+            { Text = "=", Location = new System.Drawing.Point(110, 20), Width = 20 };
+        ResultLabel = new Label { Location = new System.Drawing.Point(140, 20), AutoSize = true };
+        Plus = new Label { Text = "+", Location = new System.Drawing.Point(50, 20), Width = 20};
+
+        CalculateButton.Click += (s, e) => AddClicked?.Invoke(this, EventArgs.Empty);
+
+        this.Controls.Add(FirstNumberText);
+        this.Controls.Add(SecondNumberText);
+        this.Controls.Add(CalculateButton);
+        this.Controls.Add(ResultLabel);
+        this.Controls.Add(Plus);
+    }
+}
+```
+#### Presenter
+Відповідає за керування логікою взаємодії між View та Model.
+```sharp
+public class Presenter
+{
+    private Model model;
+    private Form1 view;
+
+    public Presenter(Form1 view, Model model)
+    {
+        this.view = view;
+        this.model = model;
+        view.AddClicked += OnAddClicked;
+    }
+
+    private void OnAddClicked(object sender, EventArgs e)
+    {
+        if (double.TryParse(view.FirstNumber, out double a) && double.TryParse(view.SecondNumber, out double b))
+        {
+            view.Result = $"{model.Add(a, b)}";
+        }
+        else
+        {
+            view.Result = "Error";
+        }
+    }
+}
+```
+#### Результат роботи
+![](https://github.com/user-attachments/assets/865d0d9e-d6e1-4a64-ba01-e82b752a8592)
