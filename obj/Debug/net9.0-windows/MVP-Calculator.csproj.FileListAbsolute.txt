@@ -1,0 +1,16 @@
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\bin\Debug\net9.0-windows\MVP-Calculator.exe
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\bin\Debug\net9.0-windows\MVP-Calculator.deps.json
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\bin\Debug\net9.0-windows\MVP-Calculator.runtimeconfig.json
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\bin\Debug\net9.0-windows\MVP-Calculator.dll
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\bin\Debug\net9.0-windows\MVP-Calculator.pdb
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP_Calculator.Form1.resources
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.csproj.GenerateResource.cache
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.AssemblyInfoInputs.cache
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.AssemblyInfo.cs
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.csproj.CoreCompileInputs.cache
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.dll
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\refint\MVP-Calculator.dll
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.pdb
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\MVP-Calculator.genruntimeconfig.cache
+C:\Users\flint\source\repos\MVP-example\MVP-Calculator\obj\Debug\net9.0-windows\ref\MVP-Calculator.dll
