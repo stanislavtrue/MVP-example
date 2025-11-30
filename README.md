@@ -80,7 +80,7 @@ public partial class Form1 : Form
 ```
 #### Presenter
 Відповідає за керування логікою взаємодії між View та Model.
-```sharp
+```csharp
 public class Presenter
 {
     private Model model;
