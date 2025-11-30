@@ -22,7 +22,7 @@ MVP зазвичай використовується в додатках Window
 ### Компоненти
 #### Model
 Відповідає лише за логіку додавання, але не взаємодіє з користувачем.
-```charp
+```csharp
 public class Model
 {
     public double Add(double a, double b)
